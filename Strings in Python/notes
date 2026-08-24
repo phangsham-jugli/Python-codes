@@ -1,0 +1,82 @@
+1.Slicing in Strings
+-technique use to fetch part of a string
+
+Syntax of indexing:string[index]
+Syntax of slicing:string[start:end:step]
+-start:starting index at which slicing operation starts
+-end:ending index at which slicing end(excluded)
+-steps:integer that specifies the step for the slicing
+
+2.Fstrings
+
+name="john"
+age=23
+language="Python"
+hours=3
+
+#john is 23 years old .he studies python 3 hour a day
+print(name,"is",age,"years old.He studies",language,hours,"a day")
+
+#using-fstring
+print(f"{name} is {age} years old and he studies {language} {hours} a day")
+
+3.Escapes sequences
+-\n -new line character
+-\t -tab
+-\\ -backlash
+-\"
+
+4.Operation on strings
+*
+s1="string"
+print(s1*3)
+
+#Membership
+*in
+s1="python"
+print("p" in s1)
+
+*not in
+print("x" not in s1)
+
+#comparison of String
+print("python"=="python")
+-True
+print("python "=="python")
+-False
+
+#Removing spaces from string-strip()
+s1="String "
+print(s1.strip()=="String")
+-True
+
+#replace()-does not change original value/String
+s1="we are learning Python"
+print(s1.replace("Python","java"))
+
+#to replace only one  letter
+print(s1.replace("e","E",1))
+print(s1.replace("n","T",3))
+
+#count()-this count how many character/word from substring  is present in main string
+#strng.count(substring)
+s1="hello my name is pj from dj"
+s2="j"
+print(f"occurrences of j is {s1.count(s2)")
+
+#changing cases of string
+#upper()
+s="Mark is a good BOY"
+print(s.upper())
+
+#lower()
+print(s.lower())
+
+#title
+print(s.title())
+
+#capitalize()
+print(s.capitalize())
+
+#startswith()-check whether the first letter of string with sub string/character
+-string.startswith(substring)
