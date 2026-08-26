@@ -1,0 +1,30 @@
+1.List in strings-it is a group of data/or datatypes
+eg-
+name="Mark"
+age=20
+marks=70.5
+-instead of this we can create a list to store data
+student=["John",20,70.4]
+*it also has index number from 0 to n
+
+2.Operation of list
+#slicing of list
+-same as slicing of string
+
+#concatenation of lists
+-to add 2 or more list
+l1=[1,2,3]
+l2=[4,5]
+l3=l1+l2
+
+#repeatation of list
+print(l2 *3)
+
+#function of list
+1.append
+-to add new item at end of list
+-syntax:list.append(item)
+
+2.insert
+-to add item at specific position
+syntax:list.insert(index,item)
