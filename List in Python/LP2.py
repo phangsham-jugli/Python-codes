@@ -29,3 +29,17 @@ print(fruits)
 #2.insert()
 fruits.insert(1,"litchi")
 print(fruits)
+
+#3.extend()
+fruits.extend(["kiwi","grapes","dragonfruit"])
+print(fruits)
+print(len(fruits))
+
+#4.remove()
+fruits.remove("mango")
+print(fruits)
+print(len(fruits))
+
+#5.pop()
+fruits.pop(3)
+print(fruits)
