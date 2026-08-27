@@ -218,6 +218,8 @@ print(date,month,year,sep"/")
 #min(1,2,3,4,5)
 -1
 
+#sum()
+
 #absolute value
 abs(-22)
 ->22
