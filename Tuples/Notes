@@ -38,3 +38,12 @@ syntax:max(tuple)
 #sum()
 syntax:sum(tuple)
 
+#Mutability & Immutability
+Mutability-a value that can be changed
+eg-List
+
+Immutability-a value that cannot be changed
+eg-tuple,string
+
+#TO CHECK MEMORY LOCATION
+-PRINT(ID(VARIABLE))
