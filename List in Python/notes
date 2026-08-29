@@ -57,7 +57,7 @@ syntax:list.insert(index,item)
 
 10.not in
 
-#Numeric operatio in list
+#Numeric operation in list
 1.min
 -to find minimum value
 -syntax:min(list)
