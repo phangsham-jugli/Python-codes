@@ -21,4 +21,4 @@ l[2]="Orange"
 print(l)
 print(id(l)) #new memory location
 
-#CANNOT CHANGE THE STRING AND TUPLES 
+#CANNOT CHANGE THE STRING AND TUPLES
