@@ -1,0 +1,38 @@
+#Conditional Statements
+1.if
+Syntax:
+if condition:
+    statement1
+    statement2
+    *if condition is true it will goes in statement1 and 2
+statement M (to end/condition is false)
+
+2.if-else statement
+syntax:
+if condition:
+    statements(if true)
+else:
+    statement(if not true)
+
+3.if,elif,else statement
+-Here we use multiple elif condition between them
+Syntax:
+if condition:
+   statement
+elif condition:
+    statement
+else:
+    statement
+
+4.Nested  Statement
+syntax:
+if condition:
+  statement
+  if condition:
+  elif condition:
+  else:
+else:
+
+5.Ternary Operator /one line if else
+syntax-
+#ture-expression if condition else false-expression
