@@ -1,0 +1,229 @@
+1.literals
+>integers-number which are non fractional
+>float-fractional numbers or decimal numbers
+>Strings-group of characters ,they should be in single quotes or double quotes in python in to write in multiple lines use double triple quotes
+>\n-next line character
+>boolean-only two values (True/False),T and F in capitals
+>None-special literals to represent noting
+
+2.Variables-Reserves memory location
+ >a=1,here variable is a which has value of 1
+ >b=2,here variable is b which has value of 2
+ >c="python"
+ *Exception
+ -Starting of variable cannot be number
+ -a=50 and A=50 is not correct
+
+3.Keywords-special reserved words that cannot be use for any other purpose in python like variable
+   >For
+   >while
+   >break
+   >continue
+   >def
+   >lambda
+   >and
+   >or
+   >not
+   >True/False/None
+
+4.Primitive Datatypes
+>integers
+age=23
+
+>float
+a=33.8
+
+>strings
+b="Mark"
+
+>boolean
+c=True
+
+>None
+d=None
+
+*to check datatype in python idle
+-type(variable name)
+
+5.Strings
+s1='hello world'
+
+s2="Whats up"
+
+s3="""hello world what is new
+      and what is going on"""
+
+#length of String-number of characters in string
+
+*to find length of string
+-len(s3) *it will also count space/space is also valid character
+
+#indexing
+*Positive indexing
+-position assign to every character and it start from 0
+eg-python
+   012345
+-it is fetch using []f
+
+#negative indexing
+-last character is always -1 like wise second last is -2
+
+#joining two string
+-s1+""+s2
+
+6.Type conversion-int,float,str
+*integer to float
+num1=100
+print (float(num1))
+
+*float to integer
+num2=11.22
+print(int(num2))
+
+*integer into string
+num3=100
+print(str(num3))
+
+7.type conversion boolean
+-val1=true
+val2=str(val1)
+
+*int,float,string into boolean
+
+-val3=bool(100)
+-val4=bool(1.2)
+-val5=bool('Python')
+-boolean of 0 is false
+-every string conversion in boolean will be true also space ' '," " except empty string
+eg="",''
+
+-int(True)
+->1
+
+-int(False)
+->0
+
+8.Arithmetic & Assignment Operators
+num1=3
+num2=5
+
+*Arithmetic operators
+# + -> Addition operator
+-num1+num2
+
+# - ->Substraction operator
+num1-num2
+
+# * ->Multiplication operator
+num1*num2
+
+# / ->Division operator
+num1/num2 *result will be in float
+
+# // -> Floor division (do not check reminder)
+num1//num2 *result will be in int
+
+# % ->modulus (to check reminder)
+num1%num2
+
+# **  ->exponent or power
+5 ** 2
+
+#Assignment Operators
+value=100,= is assignment operator
+
+#compund operator
+x=10
+x +=1 # x = x + 1
+
+x -=1 # x = x - 1
+
+9.Comparison & logical operator
+#comparision operator
+# ==,!=,>,<,>=,<=
+num1=10
+num2=20
+num3=10
+*num1==num3
+
+*num1!=20
+
+*num2>=num1
+
+*num1<=num3
+
+#Logical operators
+#and,or,not
+
+*true and true
+-true
+*true and false
+-false
+* in and operator both condition should be true
+
+*true or true
+-true
+*true or false
+-true
+*false or false
+-false
+*in or operator at least one should be true
+
+*not true
+-false
+*not false
+-true
+
+10. Associativity & Precedence of operators
+#presidence
+12+33*10
+-340(bodmas rule) also when division comes priority start from left to right
+
+name="Mark"
+age=22
+
+name=="Mark" or name=="John" and age<18
+-True (cause first priority is and)
+
+f=(name=="Mark" or name=="John") and age<18
+-False #bracket has highest priority than and ,or
+
+2**1**3
+=2(in exponent associativity is from right to left)
+
+11.Printing to console - the print() function
+Print(20,30,40)
+-20 30 40
+
+print(20,30,40,sep",")
+-20,30,40
+
+date=20
+month=03
+year=2021
+print(date,month,year,sep"/")
+-20/03/2021
+
+
+12.Input function()-take input from user
+*to take input of string
+#name=intput("Enter the name:")
+
+*to take int value
+#value=int(input("Enter the value:"))
+
+13.Numeric Function
+#max(1,2,3,4,5)
+-5
+#min(1,2,3,4,5)
+-1
+
+#sum()
+
+#absolute value
+abs(-22)
+->22
+
+#Power
+pow(2,3)
+-8

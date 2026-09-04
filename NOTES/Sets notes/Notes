@@ -1,0 +1,50 @@
+#SETS
+-collection of non-sequential elements or items (cannot use index)
+-comma separated elements enclosed in {}
+-Sets do not allow duplicate element/i can have duplicate element but in result it show only one element
+-usage of sets:anything that is unique to store this we need sets
+-Order is not maintain here
+s={"apple",20}
+
+#Basic operation in sets
+1.Membership (in,not in)
+
+2.converting tuple,list into sets vice versa
+-using typecasting
+-order is not maintain here cause set is non-sequential
+
+4.Sets are mutable
+set={1,2,3}
+set[0]=3 -we cannot do this cause set do not use index
+
+1.add()
+syntax:set.add(item)
+
+2.remove()
+syntax:set.remove(item)
+
+3.discard()
+syntax:set.discard(item)
+-it work when element is not even there in set to remove element
+ while remove() work only when there is element
+
+#Operation on sets
+1.intersection
+-to find common between set1 and set2
+-syntax:set1 & set2 & set3
+-syntax:set1.intersection(set2,set3)
+
+2.union
+-to find all the elements of set1 and set2
+-syntax:set1|set2 |set3
+-syntax:set1.union(set2,set2)
+
+3.difference
+syntax:set1-set2 -to find elements which are not in set2
+syntax:set1.difference(set2)
+
+
+#Frozen Sets
+-immutable sets
+-uses:unique element with no change in set and in order
+syntax:variable=frozenset({item})
