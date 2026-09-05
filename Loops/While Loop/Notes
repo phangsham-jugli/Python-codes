@@ -1,0 +1,17 @@
+#While loop
+-conditional based loop run until when condition is true/keep on checking the condition everytime it runs or execute programs
+Syntax:
+while condition:
+    statement
+
+#infinite loop
+-while loop keep on executing when condition never becomes false
+eg-
+while true:
+    print("hello")
+
+#Random modules
+-python code written and saving in files and using this file in other file
+-using import random we can use random functions
+-random()-returns random float between 0.0 and 1.0 (excluded)
+-randint(a,b)-returns random int between a and b (both excluded)
