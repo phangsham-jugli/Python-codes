@@ -1,0 +1,7 @@
+#Nested loop
+-Loop inside loop is called nested loop
+eg-
+for  i in range(3):
+    for j in range(2):
+    print(i,j)
+*it starts in upper loop but do not comes out from inside loop until inner loop gets satisfy
