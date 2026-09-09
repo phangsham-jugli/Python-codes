@@ -1,0 +1,92 @@
+#Function
+-eg
+print() is also function which print or display output
+-built in function already in python eg-len(),max() etc
+
+#user-defined functions-function created by programmer or developer to perform task
+*uses of function
+-code reusability
+-it can be called any time in program
+
+Syntax-
+1.without argument
+def function_name():
+        statement1
+        statement2
+        ...
+        statementN
+
+*Calling function
+function_name()
+
+2. with argument
+def function_name(arguments): *argument something we pass to function or it can have noting
+        statement1
+        statement2
+        ...
+        statementN
+
+*Calling function
+function_name(argument)
+
+3.Returning value from function
+def function_name(arguments): *argument something we pass to function or it can have noting
+        statement1
+        statement2
+        ...
+        statementN
+
+        return sum
+
+*Calling function
+function_name()
+print(sum)
+
+-we can return more than one argument
+
+#Types of Arguments
+1.Positional arguments-passing the arguments in order of their position
+eg-
+def add(a,b)
+    return a+b
+
+result=add(1,2)
+
+2.Default argument-we dont need to pass one of the argument
+def add2(a,b=12):
+    return a+b
+result2=add2(2)
+*we dont need to pass argument for b
+*in case of more than two argument default argument should be always written in last/non-default argument should not follow the default argument
+
+
+3.Keyword argument
+def add2(a,b=12,c=10):
+    return a+b+c
+*in above b and c has default value but if i want to change value of c we use keyword
+result2=add2(2,c=15)
+
+
+4.Variable length positional argument-*args/*num
+-we use this argument if we want to use n number of argument without limit
+-syntax:
+def add(*args):
+   print(args)
+   r=sum(args)
+
+add(2,3,4,5)
+*it stores data in tuple
+
+5.Variable length keyword arguments-**kwargs/**num
+-we use this argument if we want use n number of argument with keyword without limit
+-syntax:
+def add(**kwargs):
+   print(kwargs)
+   r=sum(args)
+
+add(a=12,b=33,c=-5)
+*it stores data in dictionaries
+
+
+
+
