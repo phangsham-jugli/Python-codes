@@ -20,7 +20,7 @@ def function_name():
 function_name()
 
 2. with argument
-def function_name(arguments): *argument something we pass to function or it can have noting
+def function_name(arguments): *argument something we pass to function
         statement1
         statement2
         ...
@@ -87,6 +87,59 @@ def add(**kwargs):
 add(a=12,b=33,c=-5)
 *it stores data in dictionaries
 
+#Docstring in function /comment inside function
+-to describe the function or arguments
+syntax:
+def fun():
+   """
+   ....
+   ....
+   """
+   statement1
+   statement2
+   statementN
+   return none
+
+   print(help(fun))
+*we use help function to also print all the comment inside the user defined function
+
+#RECURSIVE Function
+-recursion is a process in which a function call itself till a certain condition is no met
+*condition
+-base/terminal(to stop the recursion)
+-recursive condition
+eg-
+def ft(n):
+    if n==1:
+        return 1
+    else:
+        factr=n*ft(n-1)
+    return factr
+print(ft(5))
+
+-here in above first 5 goes to check and if goes to else condition
+-after that ft(5-1)=4 again goes to ft(n) where n=4 now now factr=5*ft(4)
+-now ft(4) goes in function again factr=5*4*ft(3) same till it reach where n=2
+-now factr=5*4*3*2*ft(2-1)
+-so it goes in function and check 1==1 so it return 1 for function ft(2-1)=ft(1)
+-now factr=5*4*3*2*1
+-at last it return factr
+
+#LOCAL AND GLOBAL VARIABLE
+n=1 #Global variable
+
+def fn():
+    n=5 #Local variable
+    print("This is inside function value of n:",n)
+
+fn()
+
+print("This outside function value of n:",n)
+
+*in this we cannot access variable of global inside function so we should make our own variable
+*likewise we cannot access local variable outside function
+*But if we want to change the global variable to local inside function we have to write:
+-global n
 
 
 
