@@ -142,4 +142,56 @@ print("This outside function value of n:",n)
 -global n
 
 
+# Function as an argument
+-in python we can pass a function as argument of another function
+eg-
+def add(number):
+    return number + 1
 
+def sqr(number):
+    return number **2
+
+num=int(input("Enter a number:"))
+res_1=add(num)
+res_2=sqr(res_1)
+print(f"Output is:{res_2}")
+
+*instead of doing this we can do
+result=sqr(add(num))
+
+*it first goes to add function later it goes to sqr function
+*we can call more than two function also as an argument
+
+#Lamda Function /anonymous function
+-a function which does not have any name
+syntax:
+lambda argument:expression
+
+*eg-for single argument
+fun=lambda a:a+1
+result=fun(3)
+
+*eg-for multiple  argument
+fun=lambda a,b:a+b
+result=fun(3,4)
+
+#Filter() and Map() With Lambda
+1.filter(function,seq)
+-function of lambda is first and sequence of list or element
+eg-
+seq=[1,2,3,4]
+odd=lambda x:True if x%2 !=0 else False
+result=filter(odd,seq)
+*for each element in seq if goes in odd function if true it keep in filter and if false filter it out
+*T0 get the result we should run for loop in filter or convert into list
+
+2.map(function,seq)
+-this also same as filter but in this it does not filter it out like filter() it keep every
+ element in map()
+seq=[1,2,3,4]
+sqr=lambda x:x**2
+result=map(sqr,seq)
+
+
+*it will print all the square of element in list
+*to print element make it in list

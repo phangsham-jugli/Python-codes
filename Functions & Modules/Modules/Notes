@@ -1,0 +1,36 @@
+#Modules
+-a modules is a file containing python file or function or program
+-uses to make code organize ,when two or more function grouped together to execute a program
+-two types of modules
+ 1.built-in modules
+  eg-math,random,keyword,sort,datetime..etc
+ 2.user defined modules
+
+#built-in module
+*how to import a module in python
+syntax:import module_name
+syntax for importing only few functions/variables:from module_name import f1,f2 -function
+
+eg-
+1.to find the square root of function import math and use sqrt() function
+ -using function of module:module_name.function()
+ -math.sqrt(var)
+
+2.to import particular function
+  -from random import randint
+  *here we dont need to write module name to use we can use directly the function
+
+3.alias-to rename the name of module_name while using in program
+  syntax:import module_name as alias_name
+  eg-
+  import datetime as dt
+
+#User Defined module
+-file with py extension with function
+-to import just in new file: import file_name
+
+#__name__
+-if we want to run executable program inside the module we want to create but it should not run when
+ we import in other file so we use this: if __name__=="__main__"
+
+eg-M3.py import arithmetic.py
