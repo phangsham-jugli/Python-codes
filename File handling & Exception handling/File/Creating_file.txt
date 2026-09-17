@@ -1,0 +1,3 @@
+Hello this is new file created using python using fh2.py!
+written using a mode in fh5.py
+a mode use to add new content at last

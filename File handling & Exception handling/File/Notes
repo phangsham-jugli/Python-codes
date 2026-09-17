@@ -1,0 +1,68 @@
+File handling
+-we need to handle the file to overcome from data loss file can be handle in two ways:
+1.Text file
+-store data in form of characters
+2.Binary file
+-store data in byte(group of 8-bits)
+-eg:image,audio,video
+
+#TEXT File
+1.Opening file in python
+syntax:
+open(file_name,mode to open)
+
+Modes:r(read),x(create),w(write),a(append)
+-to work with text file mode:t(text)
+-to work with binary file mode:b(binary)
+-'rt':this two modes are default
+
+*when we open file it give reference or pointer to beginning of that file assigning on a variable we can edit the file
+*every time when we open file we should close the file if not it may lead to file corrupted
+
+#Closing a file
+-close()
+-variable name.close()
+
+*after closing a file we cannot perform any operation
+
+2.Creating file
+syntax:
+open("File name","tx")
+mode=x,for txt "xt",for binary "bx"
+
+#writing into file
+-write(content)
+
+3.The W mode
+syntax:
+open("File name","wt")
+-open the file for writing /overwrites the file
+-it deletes the content of the existing file
+-but if file does not exist create new file/using x mode is safe for creating new file
+-uses:write(content)-to write into file
+
+4.Reading files
+-open("File name","rt")
+-read()=reads content of the file, if files open in text(t) mode it reads context as string
+-read(10)=it will only read first 10 character of content
+-readline()=it will read first line for another line we have to use readline() next to it
+-readline()=it will now read second line but i give index number it will read char
+
+#readlines()=it read all the line at once and give in list
+
+5.Appending into a file-mode:a
+-to add content at last of existing file
+-if file does not exist it create ne file
+
+#c,w,a
+uses:write()
+#r
+uses:1.read(n)
+     2.readline()
+     3.readlines()
+
+6.With statement
+-The with statement is used in file handling mainly because it automatically closes the file after you're finished with it.
+-if file open in read mode and write function is use it close the file automatically likewise
+syntax:
+with open("file name","tr/mode") as fh:
