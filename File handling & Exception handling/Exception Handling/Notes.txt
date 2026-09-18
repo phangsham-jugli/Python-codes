@@ -1,0 +1,96 @@
+Exception Handling
+-Types of error
+1.compile time error=syntax error and indentation error
+eg1:syntax error
+age=22
+  print(age
+
+eg2:
+age=22
+if age>18:indentation error
+print("your an adult")
+
+2.Runtime error/exceptions = errors during execution
+eg1:
+print(10/0)
+
+eg2:
+x=100
+result=x+y
+print(result)
+
+*to handle exception
+1.try-except block
+syntax:
+num1=int(input("Enter first number:"))
+num2=int(input("Enter Second number:"))
+
+try:
+    result=num1/num2
+    print(round(result,2))
+except ZeroDivisionError: #we use this cause denominator 0 we cannot divide
+    print("Error! Denominator is 0")
+
+*but we can use multiple except in this case input and all should be inside try block
+eg:
+try:
+    num1 = int(input("Enter first number:"))
+    num2 = int(input("Enter Second number:"))
+
+    result=num1/num2
+    print(round(result,2))
+except ZeroDivisionError: #we use this cause denominator 0 we cannot divide
+    print("Error! Denominator is 0")
+except ValueError:
+    print("Input should be integer!")
+
+eg3:
+try:
+    with open("practicefile.txt","tr") as eh:
+        data=eh.read()
+
+    print(data)
+except FileNotFoundError as err:
+    print("File not found")
+    print(err)
+
+*in above we use (as err) and printed err cause this will show what python want to tell the error
+
+
+8.else and finally block
+#Else
+-uses to print output when there is no error
+try:
+    with open("Notes.txt","tr") as eh:
+        data=eh.read()
+
+except FileNotFoundError as err:
+    print("File not found")
+    print(err)
+
+else:
+    print(data)
+
+#Finally block
+-it always execute code even when there is error
+eg:
+import io
+try:
+    eh=open("practice_file.txt","tw")
+    data=eh.read()
+    fh.close()
+
+except FileNotFoundError as err:
+    print("File not found")
+    print(err)
+except io.UnsupportedOperation as io_err:
+    print(io_err )
+else:
+    print(data)
+finally:
+    print("it run even there is error")
+    fh.close()
+
+*in above error was on tw but we read the data so it show error so it directly goes to except io_block and finally will always print
+*uses of finally is in above there was error  at line 3 but file was created due to "W"
+ but it does not close so in finally we can use to close this file
