@@ -94,3 +94,17 @@ finally:
 *in above error was on tw but we read the data so it show error so it directly goes to except io_block and finally will always print
 *uses of finally is in above there was error  at line 3 but file was created due to "W"
  but it does not close so in finally we can use to close this file
+
+9.Raising exception
+-to throw an error or exception when needed
+syntax:
+raise error name("Comment for error")
+
+age=int(input("Enter your age:"))
+if age<=0:
+  raise Exception("age cannot be negative")
+else:
+    if age>18:
+    print("Eligible to vote")
+    else:
+    print("Not Eligible to vote")
