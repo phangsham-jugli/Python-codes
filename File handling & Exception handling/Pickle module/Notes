@@ -1,0 +1,14 @@
+Pickle Module
+-we use this cause we cannot store dict using write() in file we can change it to string but i get complex and show error when accessing the data
+ so we use pickle module to store dict /data and read
+-uses of pickle is to store in binary format eg of binary:photos,audio
+-to use import pickle
+
+#serialization
+#dump()-to store data one by one
+
+#deserialization
+-to read the binary data one by one
+*load()
+
+*it shows error when there is no data during load()

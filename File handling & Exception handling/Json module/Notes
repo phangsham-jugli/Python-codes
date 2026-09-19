@@ -1,0 +1,49 @@
+10.json module
+-JavaScript object notation
+
+#dump()
+-dump(): to store the existing data into new file or existing file using mode:x,w
+
+eg:list ,dictionaries
+*it uses dump() to store
+Syntax:
+import json
+
+json.dump(data/varialble,file,indent=n)
+
+eg:
+import json
+l=[1,2,3,4]
+
+with open("New file.txt","tx") as fh:
+       json.dump(l,fh)
+
+#load()
+-load():to read the file
+
+import json
+
+with open("New file.txt","tr") as fh:
+      data=json.load(fh)
+
+print(data)
+
+#update()
+-it update the existing data
+-first read the existing data and then update the data
+eg:
+import json
+
+with open("New file.txt","tr") as fh:
+      data=json.load(fh)
+      data.update(l)
+
+ex-original data=l=[1,2,3,4]
+we can change in the main data and update as
+l=[0,3,5,6]
+
+*after update the data again dump the update data
+with open("New file.txt","tw") as fh:
+       json.dump(data,fh,4)
+
+*IF CONFUSION LOOK JSON_MODULE2.PY

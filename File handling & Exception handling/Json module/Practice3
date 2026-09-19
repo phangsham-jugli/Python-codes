@@ -1,0 +1,17 @@
+{
+    "student1": {
+        "roll": 3,
+        "name": "john",
+        "marks": 72
+    },
+    "student2": {
+        "roll": 1,
+        "name": "jake",
+        "marks": 63
+    },
+    "student3": {
+        "roll": 2,
+        "name": "Bhn",
+        "marks": 39
+    }
+}
