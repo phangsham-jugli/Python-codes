@@ -54,7 +54,7 @@ open("File name","wt")
 -to add content at last of existing file
 -if file does not exist it create ne file
 
-#c,w,a
+#x,w,a
 uses:write()
 #r
 uses:1.read(n)
