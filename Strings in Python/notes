@@ -80,3 +80,7 @@ print(s.capitalize())
 
 #startswith()-check whether the first letter of string with sub string/character
 -string.startswith(substring)
+
+#split()
+-separates text where ever there is whitespaces(spaces,newlines,tabs)
+-this is used to count word only
