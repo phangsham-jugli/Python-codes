@@ -1,0 +1,3 @@
+hello this is python
+practice txt
+which is used in p1.py for practice
