@@ -1,0 +1,95 @@
+Regular Expression /RegEx
+-group of character to find the match pattern
+-to use RegEx we use re module
+-it provides symbol,character etc...
+-so import re module
+
+eg:
+s1="Python is very much advanced and it has 3.13,3.12,3.14 version"
+*to find python in s1 or not we can do
+-print("Python" in s1)
+
+*to find its index
+-print(s1.find("Python")
+-it gives the first index from where Python start in here it will give index of P
+
+*what if we have to search the pattern  of version so we use RegEx
+
+#1:re.search(regex_pattern,string)
+-when there is match found it return (match object)
+-it gives where to where(index/span) the Character is found
+-last index is excluded
+
+*meta character-symbol,special character
+
+#search using pattern
+s1="Python is very much advanced and it has 3.13,3.12,3.14 version"
+src=re.search("[0-9][0-9]",s1)
+print(src)
+
+*here it search first two consecutive number from 0-9 and 0-9
+ so the first consecutive number is 13 so it gives 13 from 3.13
+ where 13 is consecutive number
+
+*what if to find 3.13 or any number with . we use second meta character(.)
+
+#2: .  -->meta character
+ -it matches . and any character except newline
+
+eg1:
+s1="Python is very much advanced and it has 3.13,3.12,3.14 version"
+src=re.search("[0-9].[0-9][0-9]",s1)
+print(src)
+-it will give first number where this pattern occur =3.13
+
+eg2:
+src2=re.search("[0-9].[0-9][0-9]","House number 123/A")
+print(src2)
+-it will give 123 but the pattern is different so . matches any character except newline here 1 . 3 in place of . =2
+
+#[.]
+-it will look for exact . position in a pattern
+
+eg:
+src2=re.search("[0-9][.][0-9][0-9]","House number 123/A")
+print(src2)
+-it will give none cause there is not exact . position after 1
+
+#3.Special character in regex
+#r"old\new"
+-r is a special character where strings are kept raw eg if we dont use r it will give result old ew but due to r it will give old\new
+
+#\d
+-\d represent 1 digit character similar to [0-9]
+
+#\D
+-\D opposite of \d non-digit character
+
+#\s
+-\s it matches any whitespace character tab and newline character
+
+#\S
+-\S is opposite of \s it will it matches any character except space,\n,\t
+
+#\w
+-it matches [a-z],[A-Z],[0-9],_
+
+#\W
+-it is opposite of \w it matches any character except [a-z],[A-Z],[0-9],_
+
+4.Quantifiers
+-Symbol or character used for how many quantity we want to match
+
+# +:-matches one or more repetition of particular character
+Syntax: r"[A-Z][a-z]+"
+
+# *:-zero or more
+Syntax:r"[A-Z][a-z]*"
+
+# ?:-Zero or one repetition of the previous pattern
+Syntax:r"[A-Z][a-z]?"
+
+# {n}:-n number or character
+syntax:r"[a-z]{4}" =it will run upto 4 character
+       r"[A-Z][a-z]{4}" =here the 4 will work for lower latter not upper
+       r"[A-Z][a-z]{2,4}" =in curly bracket it means that only it will match lower cast between 1 to 4
