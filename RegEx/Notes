@@ -93,3 +93,45 @@ Syntax:r"[A-Z][a-z]?"
 syntax:r"[a-z]{4}" =it will run upto 4 character
        r"[A-Z][a-z]{4}" =here the 4 will work for lower latter not upper
        r"[A-Z][a-z]{2,4}" =in curly bracket it means that only it will match lower cast between 1 to 4
+       r"[A-Z][a-z]{4,}" =in curly bracket it means that only it will match lower cast between 4 or more
+       r"/b[A-Z][a-z]{2,4}/b" =in curly bracket it means that only it will match lower cast between lower limit 2 and upper limit 4 pattern will only match
+
+# ^ -Caret
+-it check only the starting of string that matches pattern or not
+Syntax:patt =r"^[a-z]{7}" (^ should be placed in the beginning of pattern)
+
+# $
+-check pattern at ending of string
+Syntax:patt=r"[a-z]{7}$"
+
+# group - ()
+-it is use to match the exact word not like [] cause it match one character
+Syntax:patt=r"(hello)"
+
+# match ()
+-check only the beginning of the string it is like search()
+Syntax:re.match(pattern,string)
+
+#search()
+-it find the first occurrence of the pattern in whole string
+Syntax:re.search(pattern,string)
+
+# findall ()
+-it find all the matches pattern without span(index)
+Syntax:re.findall(pattern,string)
+
+# finditer()
+-similar to findall but gives iterator of all the match object but do not print
+
+# Sub ()
+-use to substitute a sting or pattern with another string/replace
+Syntax:re.sub(pattern,replacement,string)
+
+# compile()
+-compiling the pattern or data help to optimize the program and speed cause
+ using frequently of raw data and searching it will cause slow in program execution
+ due to this compiled data is much better way in a huge data after compiling we can search
+
+-also give result in re.pattern
+
+syntax:re.compile(pattern)

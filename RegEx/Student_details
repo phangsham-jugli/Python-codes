@@ -1,0 +1,26 @@
+Alice alice_123@example.com 9847263462
+Mark Mark_234@example.com 3847263459
+John john_567@example.com 8735243678
+
+Invalid emails:
+-@example.com
+_123bcf@example.com
+
+Exercise:Finding valid emails
+
+ptr=r"\b[a-zA-Z]+[\w_.-]+[@][a-z]+[.][a-z]+\b"
+
+1 step-[a-zA-Z]+
+-above pattern means that it chan have starting point from a-z or A-Z or 0-9 more than one
+
+2 step-[\w_.-]+
+-it mean after tha starting it can have a-z ,A-Z, 0-9,- and . more than one
+ * \w represent a-z,A-Z,0-9,_
+
+3 step-[@][a-z]+
+-it this it means after 2 step @ should be at exact position after this it can have a-z more than on
+
+4 step-[.][a-z]+
+-it means that after 3 step . should be at exact position after that it can have a-z more than one
+
+* we use \b at starting and \b in end this mean that it should start from exact 1 step and end at exact step 4 no extra cut in between
