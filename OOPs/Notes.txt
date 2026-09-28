@@ -1,0 +1,215 @@
+1. Introduction to OOPs
+
+-OOP stands for Object-Oriented Programming.
+
+-OOP is a programming approach where we organize a program using classes and objects.
+
+-OOP allows us to represent real-world entities in a program.
+
+Examples:
+Student
+Employee
+Car
+Bank Account
+Main concepts of OOP
+Classes
+Objects
+Attributes
+Methods
+
+2. Classes and Objects
+Class
+-A class is a blueprint or template for creating objects.
+-For example, Student can be a class that represents a student.
+
+Syntax
+class ClassName:
+    # statements
+Example
+class Student:
+    pass
+
+H-ere, Student is the name of the class.
+
+#Object
+-An object is an instance of a class.
+
+Syntax
+object_name = ClassName()
+Example
+s1 = Student()
+
+-Here, s1 is an object of the Student class.
+
+-We can create multiple objects from the same class.
+
+s1 = Student()
+s2 = Student()
+-Here, s1 and s2 are two different objects of the same Student class.
+
+3. Creating Classes and Objects
+-A class is created using the class keyword.
+
+#Syntax for creating a class
+class ClassName:
+    pass
+Example
+class Student:
+    pass
+
+#To create an object, we call the class.
+
+Syntax for creating an object
+object_name = ClassName()
+Example
+s1 = Student()
+
+#We can create multiple objects from a class:
+
+s1 = Student()
+s2 = Student()
+4. Attributes
+
+#Attributes are variables that belong to an object.
+For example, a student can have attributes such as:
+name
+roll
+
+*We can add attributes to an object using the dot . operator.
+Syntax:
+object_name.attribute_name = value
+
+Example
+s1.name = "John"
+s1.roll = 202
+
+Here:
+name is an attribute.
+roll is an attribute.
+Accessing Attributes
+
+#We can access an attribute using the object name and dot . operator.
+Syntax:
+object_name.attribute_name
+Example
+print(s1.name)
+print(s1.roll)
+
+#Different objects can have different attribute values.
+s1.name = "John"
+s2.name = "Mark"
+
+*Here, s1 has the name "John" and s2 has the name "Mark".
+
+#__dict__
+
+__dict__ gives the attributes of an object in dictionary format.
+
+Syntax:
+object_name.__dict__
+Example
+print(s1.__dict__)
+
+If:
+s1.name = "John"
+s1.roll = 202
+
+then:
+print(s1.__dict__)
+Output:
+{'name': 'John', 'roll': 202}
+
+*So, __dict__ gives the object's attributes in dictionary format.
+
+5. Instance Methods
+-A method is a function defined inside a class.
+-An instance method is a method that belongs to an object and can be called using that object.
+
+Syntax:
+class ClassName:
+    def method_name(self):
+        # statements
+Example
+class Student:
+    def study(self):
+        print("The student studies for 3 hour a day")
+
+*Here, study() is an instance method.
+
+*self
+-self refers to the current object.
+-It is written as the first parameter of an instance method.
+
+Syntax:
+def method_name(self):
+    # statements
+Example:
+def study(self):
+    print("The student studies for 3 hour a day")
+
+#Calling an Instance Method
+#We call an instance method using the object and dot . operator.
+
+Syntax:
+object_name.method_name()
+Example
+s1.study()
+
+*We can call the same method using different objects:
+s1.study()
+s2.study()
+
+6.Argument in instance methods
+-class My_Class:
+    def add(self,a,b):  # a and b are argument that receive values from user and add is method/instance method
+        add=a+b
+        return add
+
+#creating object
+obj1=My_Class()
+
+#calling method using object
+result=obj1.add(3,4)
+
+print(f"sum of 3 and 4 is :{result}")
+
+6.Initializer and instance variables
+#__init__()
+-it is an instance method
+-it is used to create and initialize the attributes during the object creation separately
+-it is like an constructor in java
+Syntax:
+class Student:
+    def __init__(self, name, roll):
+        self.name = name
+        self.roll = roll
+        self.Dept="Science"
+
+s1 = Student("John", 101) #directly we can assign argument during creating object without s1.name="john" after creating object
+                          #Department will be constant as Science
+                          #but in here we can also have other method for method we have to call by method function
+
+7.Class variable
+-variable are defined at the class level
+-same copy of the class variables are shared among the objects or methods
+
+Syntax:
+class Student:
+    college="ABC University of Poop people"
+    Dept=["Arts","Science","Commerce"]
+
+    def __init__(self,name,roll):
+        self.name=name
+        self.roll=roll
+    def study(self,n):
+        print(f"Student studies for an {n} hour")
+
+s1=Student("Rohit",11)
+print(s1.name,s1.roll)
+s1.study(4)
+
+#using class variable
+print(s1.college)
+print(s1.Dept)
+
+
