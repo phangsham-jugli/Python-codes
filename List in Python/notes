@@ -43,7 +43,7 @@ syntax:list.insert(index,item)
 
 6.reverse
 -it reverse the list
--syntax:list.reverse()
+-syntax:list.reverse() #it should no be rev=list.reverse()
 
 7.sort
 -to sort in ascending/descending order
