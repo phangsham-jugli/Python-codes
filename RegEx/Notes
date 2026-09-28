@@ -135,3 +135,5 @@ Syntax:re.sub(pattern,replacement,string)
 -also give result in re.pattern
 
 syntax:re.compile(pattern)
+
+* [^A-Za-z] --in bracket ^ it mean NOT an letter
