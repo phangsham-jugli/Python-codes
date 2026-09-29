@@ -212,4 +212,38 @@ s1.study(4)
 print(s1.college)
 print(s1.Dept)
 
+8.Class method
+-it is a method defined inside the class that are bound to the class
+-to create a class method,we use a decorator ->@classmethod
+-uses of  class method to access the class variable even though we can access form normal method
+-uses:in line number form 237-241 we can run a for loop or do operation on class variable using class method (mainly purpose is for this)
+
+Syntax:
+Class Class_name:
+    name="Abc"
+    Dept=["Arts","Science","Commerce"]
+
+    def add(a,b) #object method/instance method
+    return a+b
+
+   @classmethod  #only below this function/method is for class
+   def greet():
+       Print("Hello")
+
+   #to access class variable we use cls.variable name form class method
+   @classmethod
+   def clg_name(cls):
+     print(cls.name)
+
+   @classv method
+   def dept_name(cls):
+       print("Department are:")
+       for i in cls.Dept:
+          print(i)
+
+9.Static method
+-it is a method defined inside a class which is neither bound to the object nor to the class
+-to create static method we use decorator -@staticmethod
+-we don't have to pass anything in method
+
 
