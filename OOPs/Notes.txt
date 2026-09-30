@@ -173,7 +173,7 @@ result=obj1.add(3,4)
 
 print(f"sum of 3 and 4 is :{result}")
 
-6.Initializer and instance variables
+6.Initializer and instance variables (code oop5.py)
 #__init__()
 -it is an instance method
 -it is used to create and initialize the attributes during the object creation separately
@@ -212,14 +212,20 @@ s1.study(4)
 print(s1.college)
 print(s1.Dept)
 
-8.Class method
+Eg2:
+class Student:
+    college = "DHSK College"
+
+print(Student.college)
+
+8.Class method(code oop7.py)
 -it is a method defined inside the class that are bound to the class
 -to create a class method,we use a decorator ->@classmethod
 -uses of  class method to access the class variable even though we can access form normal method
 -uses:in line number form 237-241 we can run a for loop or do operation on class variable using class method (mainly purpose is for this)
 
 Syntax:
-Class Class_name:
+class Class_name:
     name="Abc"
     Dept=["Arts","Science","Commerce"]
 
@@ -235,15 +241,130 @@ Class Class_name:
    def clg_name(cls):
      print(cls.name)
 
-   @classv method
+   @classmethod
    def dept_name(cls):
        print("Department are:")
        for i in cls.Dept:
           print(i)
 
-9.Static method
+9.Static method (code oop8.py)
 -it is a method defined inside a class which is neither bound to the object nor to the class
 -to create static method we use decorator -@staticmethod
 -we don't have to pass anything in method
+Syntax:
+ @staticmethod
+    def greet():
+        print("Welcome to college!")
+
+10.Inheritance introduction and single inheritance (code oop9.py-10.py)
+-to use the property of parent class by other class is called inheritance
+-in inheritance if child class does not have __init__ class then it will take parent class __init__ else it will work on its __init__ but we can called parent
+ __init__in child __init__ using *super() keyword
+
+eg:
+child __init__()
+statement
+statement
+#calling parent init
+super().__init__()
+
+#single inheritance
+Syntax:
+class parent():
+  def Parentmethod()
+  ............
+
+class child(parent):
+  def methodChild()
+
+*Here now the child class can access the method,attributes,class variable of parent
+-c1=child()
+-c1.Parentmethod()
 
 
+#MUlTIPLE INHERITANCE (code oop11.py)
+-Multiple Inheritance is a type of inheritance where one child class inherits properties and methods from two or more parent classes.
+
+Eg:
+class Parent1:
+    pass
+
+class Parent2:
+    pass
+
+class Child(Parent1, Parent2):
+    pass
+
+*Here class child can access the method of parent1 and parent2
+
+#MULTILEVEL INHERITANCE (code oop12.py)
+-Multilevel Inheritance is a type of inheritance where a class inherits from another class, and a third class inherits from that child class.
+
+Eg:
+class Parent:
+    pass
+
+class Child(Parent):
+    pass
+
+class GrandChild(Child):
+    pass
+
+#Here Grandchild can access method of child and parent ,child can access method of parent
+
+#POLYMORPHISM
+-Polymorphism means “many forms”. It allows the same method or function name to perform different actions depending on the object.
+
+*we can create own function using dunder operator to know use help(int)
+
+#Polymorphism-method overloading(code oop13.py)
+-Python does not support traditional method overloading like Java. Instead, we can achieve similar behavior using default arguments.
+eg:
+class A:
+  def add(self,num1,num2):
+  return num1+num2
+
+  def add(self,num1,num2,num3):
+  return num1+num2+num3
+
+#Polymorphism-method overriding
+-Method Overriding occurs when a child class provides its own implementation of a method/use same method name in child class that already exists in the parent class.
+eg:
+class Parent:
+    def method(self):
+        pass
+
+class Child(Parent):
+    def method(self):
+        pass
+
+*if child class call method then the method of class will work
+*or if we want the same feature to work as parent class in child class just code pass nad called method of parent using child object
+
+#Abstract class(oop15.py)
+-An Abstract Class is a class that is used as a blueprint for other classes.
+ We cannot create an object directly from an abstract class.
+-to create abstract class we need to import in new file
+ *from abc import ABC, abstractmethod
+ -we have to use decorator @abstractmethod
+ -with the help of abrstract class it help to create the method with this method we cannot create an object or make sure to have
+  this method
+
+eg:
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+
+d = Dog()
+d.sound()
+
+*without sound method in Dog class we won't be able to create object
+
+#Custome exception
